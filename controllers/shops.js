@@ -34,4 +34,4 @@ const deleteShop = (req, res) => {
 
 module.exports = {
     getShops, getShop, createShop, updateShop, deleteShop,
-}
+};
