@@ -5,6 +5,8 @@ const app = express()
 const port = process.env.PORT || 3000;
 
 const shopsRoute = require('./routes/shops');
+const constrollers = require('./controllers/shops');
+const { models } = require("mongoose");
 
 
 
@@ -12,6 +14,8 @@ const shopsRoute = require('./routes/shops');
 app.use(express.json());
 
 app.use("/shops", shopsRoute);
+app.use("/posts", models);
+
 
 
 
