@@ -71,9 +71,12 @@ const deleteShop = async (req, res, next) => {
 
 
 module.exports = {
+
     getShop, 
     getShops,
     createShop,
     updateShop,
     deleteShop
+
+
 };
