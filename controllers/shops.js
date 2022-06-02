@@ -1,37 +1,79 @@
-const { get } = require("express/lib/response")
-const { request } = require("https")
+const shopsModel = require('../models/shops');
 
-const getShops = (req, res) => {
-    res.send("this is the get shops controller")
-}
-//NEEDS AN ID
-// GET REQUEST ("http://localhost:3000/shops/:id")
+const getShops = async (req, res, next) => {
+try {
+    const shops = await shopsModel.find({});
+    res.json(shops);
+} catch (err) {
+    next(err)
+};
+};
 
-const getShop = (req, res) => {
-    const { id } = req.params
-    res.send(id)
-}
+const getShop = async (req, res, next) => {
 
-//NEEDS no ID
-// POST REQUEST ("http://localhost:3000/shops")
-const createShop = (req, res) => {
-    res.send("this to create shop")
-}
+    try {
+        const {
+            params: { id },
+        } = req;
 
-//NEEDS AN ID
-// PUT REQUEST ("http://localhost:3000/shops/:id")
-const updateShop = (req, res) => {
-    res.send("update shop")
-}
+        const shop = await shopsModel.findById(id);
+        res.json(shop);
+    } catch (err) {
+    
+    }
+    
+};
 
-//NEEDS AN ID
-// DELETE REQUEST ("http://localhost:3000/shops/:id")
-const deleteShop = (req, res) => {
-    res.send("delete shop")
-}
+const createShop = async (req, res, next) => {
+    try {
+        const {
+            body: {name, owner, description, email, telephoneNumber },
+} = req;
+        const newShop = await shopsModel.create({name, owner, description, email, telephoneNumber});
+        res.json(newShop);
+    } catch (err) {
+        next(err)
+    };
+    
+};
+
+const updateShop = async (req, res, next) => {
+    try {
+        const {
+         params: { id },
+         } = req;
+
+         const {
+            body 
+        } = req;
+
+         const updatedShop = await shopsModel.findByIdAndUpdate(id, body);
+         res.json(updatedShop);
+     } catch (err) {
+         next(err)
+     };
+    
+};
+
+const deleteShop = async (req, res, next) => {
+    try {
+       const {
+        params: { id },
+        } = req;
+        const deletedShop = await shopsModel.findByIdAndDelete(id);
+        res.json(deletedShop);
+    } catch (err) {
+        next(err)
+    };
+    
+};
 
 
 
 module.exports = {
-    getShops, getShop, createShop, updateShop, deleteShop,
+    getShop, 
+    getShops,
+    createShop,
+    updateShop,
+    deleteShop
 };
