@@ -9,6 +9,7 @@ const shopsSchema = new Schema({
   email: {type: String},
   telephoneNumber: {type: String},
   img: { type: String },
+  location: {type: String},
   createdAt: { type: Date, default: Date.now() },
   
 });

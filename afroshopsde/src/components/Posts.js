@@ -19,6 +19,8 @@ useEffect(() => {
   getPosts();
 }, []);
 
+console.log("this is my data", posts)
+
   return (
     <div>
       {posts.map((element)=>{
