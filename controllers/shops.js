@@ -27,9 +27,9 @@ const getShop = async (req, res, next) => {
 const createShop = async (req, res, next) => {
     try {
         const {
-            body: {name, owner, description, email, telephoneNumber },
+            body: {name, owner, description, email, telephoneNumber, location },
 } = req;
-        const newShop = await shopsModel.create({name, owner, description, email, telephoneNumber});
+        const newShop = await shopsModel.create({name, owner, description, email, telephoneNumber, location});
         res.json(newShop);
     } catch (err) {
         next(err)
