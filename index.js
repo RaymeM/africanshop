@@ -24,7 +24,7 @@ app.use(express.json());
 
 
 app.use("/shops", shopsRoute);
-app.use("/posts", models);
+/* app.use("/posts", models); */
 
 
 

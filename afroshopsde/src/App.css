@@ -12,5 +12,12 @@
 .leaflet-container {
   width: 100vw;
   height: 70vh;
+
  
+}
+
+.Search{
+  display: flex;
+  justify-content: center;
+
 }
