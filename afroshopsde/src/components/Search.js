@@ -1,6 +1,13 @@
 function Search() {
+
   return (
-    <div>Search</div>
+    <div>
+      <form className="Search">
+        <label htmlFor="Search">Search Map</label>
+        <input type="Search"/>
+        <button type="on">Search</button>
+      </form>
+    </div>
   );
 }
 
