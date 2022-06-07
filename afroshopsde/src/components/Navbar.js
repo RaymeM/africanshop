@@ -15,6 +15,7 @@ export default function Navbar() {
         <NavLink className="navLink" to="/posts">
           Posts
         </NavLink>
+        
       </div>
     </div>
   );

@@ -11,9 +11,9 @@ function Search() {
   return (
     <div id="searchBar">
       <form className="Search" onClick={(e) => handleSubmit}>
-        <label htmlFor="Search">Search Map</label>
+        <label htmlFor="Search"><h2>Search Map</h2></label>
         <input type="text" onChange={(e) => setQuery(e.target.value)} />
-        <button>Search</button>
+        <button><h2>Search</h2></button>
       </form>
     </div>
   );

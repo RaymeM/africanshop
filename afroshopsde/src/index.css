@@ -10,7 +10,7 @@
   font-size: 1.7rem;
   justify-content: space-between;
   padding: 2rem 4rem;
-  background-color: rgb(119, 241, 119);
+  background-color: rgb(252, 158, 50);
 }
 #navbar .right {
   display: flex;
@@ -19,13 +19,15 @@
 }
 
 #navbar .logo {
-  height: 2rem;
-  width: 2rem;
-  background-image: url("/Users/vanessazentgraf/Desktop/africanshop/afroshopsde/public/logos/logo.png");
+  height: 3rem;
+  width: 3rem;
+  background-image: url("../public/logos/logo.png"); 
+  background-size: cover;
+  border: 2px solid red
 }
 
 #navbar .navLink {
-  color: #fff;
+  color: rgb(3, 75, 19);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
@@ -34,7 +36,7 @@
 /* Home */
 
 #home {
-  background-color: rgb(149, 128, 128);
+  background-color: rgb(245, 218, 218);
   padding: 4rem;
   display: flex;
   min-height: 100vh;
@@ -46,7 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: rgb(248, 244, 244);
   border-radius: 5px;
   padding: 1rem;
   margin: 1rem;
@@ -54,12 +56,13 @@
 }
 .Search {
   display: flex;
+  color: black;
   gap: 0.5rem;
 }
 .footer {
   display: flex;
   justify-content: center;
-  background-color: rgb(119, 241, 119);
+  background-color:  rgb(252, 158, 50);
   margin-top: 1rem;
   color: #fff;
   text-decoration: none;
@@ -74,5 +77,28 @@
 /* Map */
 .leaflet-container {
   margin-bottom: 3rem;
-  border: 2px solid red;
+  height: 100vh;
+  
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
