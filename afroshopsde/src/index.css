@@ -21,9 +21,9 @@
 #navbar .logo {
   height: 3rem;
   width: 3rem;
-  background-image: url("../public/logos/logo.png"); 
+  background-image: url("../public/logos/logo.png");
   background-size: cover;
-  border: 2px solid red
+  border: 2px solid red;
 }
 
 #navbar .navLink {
@@ -42,6 +42,26 @@
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
+}
+
+/* Card */
+.card {
+  background-color: rgb(252, 158, 50);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 20%;
+  margin: 2rem auto;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(3, 75, 19);
 }
 /* SEARCH BAR */
 #searchBar {
@@ -62,7 +82,7 @@
 .footer {
   display: flex;
   justify-content: center;
-  background-color:  rgb(252, 158, 50);
+  background-color: rgb(252, 158, 50);
   margin-top: 1rem;
   color: #fff;
   text-decoration: none;
@@ -78,7 +98,6 @@
 .leaflet-container {
   margin-bottom: 3rem;
   height: 100vh;
-  
 }
 
 /* Style all font awesome icons */
@@ -99,6 +118,6 @@
 
 /* Facebook */
 .fa-facebook {
-  background: #3B5998;
+  background: #3b5998;
   color: white;
 }
