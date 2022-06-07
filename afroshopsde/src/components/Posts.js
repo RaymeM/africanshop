@@ -1,27 +1,36 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Post from "../components/Post";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
 
-  const getPosts = async () => {
-    try {
-      const response = await axios.get("http://localhost:3000/shops");
-      setPosts(response.data);
-    } catch (error) {}
-  };
-
   useEffect(() => {
-    getPosts();
+    axios
+      .get("http://localhost:3000/shops")
+      .then((res) => {
+        setPosts(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
-
-  console.log("this is my data", posts);
 
   return (
     <div>
       <h1>Posts</h1>
-      {posts.map((element) => {
-        return <p key={element.name}> {element.owner}</p>;
+      {posts.map((post) => {
+        return (
+          <Post
+            key={post._id}
+            name={post.name}
+            id={post._id}
+            owner={post.owner}
+            description={post.description}
+            email={post.email}
+            telephoneNumber={post.telephoneNumber}
+          />
+        );
       })}
     </div>
   );

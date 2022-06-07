@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/shops", shopsRoute);
-/* app.use("/posts", models); */
+/* app.use("/posts", postsRoute); */
 
 app.use(errorHandler);
 
