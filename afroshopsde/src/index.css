@@ -4,6 +4,19 @@
   padding: 0;
 }
 
+.App{
+  min-height: 100vh;
+
+}
+
+.layout-container{
+  /* background-color: blue; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* NAVBAR */
 #navbar {
   display: flex;
@@ -36,12 +49,42 @@
 /* Home */
 
 #home {
-  background-color: rgb(245, 218, 218);
+  background-color: rgb(247, 244, 244);
   padding: 4rem;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
+}
+
+.container{
+  /* border: solid 1px grey; */
+  min-width: 70vw;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  margin: 2rem auto;
+}
+
+.container-child{
+  border: solid 1px grey;
+  width: 48%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  
+}
+
+
+/*
+Card-container*/
+.posts-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 /* Card */
@@ -50,8 +93,8 @@
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  width: 20%;
-  margin: 2rem auto;
+  width: 200px;
+  margin: 2rem;
 }
 .card-body {
   display: flex;
@@ -83,16 +126,16 @@
   display: flex;
   justify-content: center;
   background-color: rgb(252, 158, 50);
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
   right: 0;
-  left: 0;
+  left: 0; */
 }
 /* Map */
 .leaflet-container {
