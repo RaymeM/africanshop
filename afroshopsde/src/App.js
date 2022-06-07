@@ -11,10 +11,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="home" element={<Home />} />
+          <Route path="" element={<Home />} />
           <Route path="posts" element={<Posts />} />
           <Route path="map" element={<Map />} />
-
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
