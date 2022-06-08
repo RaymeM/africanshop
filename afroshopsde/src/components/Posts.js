@@ -9,7 +9,7 @@ function Posts() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/shops")
+      .get("https://obscure-shelf-58262.herokuapp.com/shops")
       .then((res) => {
         setPosts(res.data);
         setLoading(false)
