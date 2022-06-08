@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "../components/Post";
+import pictureHome from "../../src/photos/freshFood.jpg";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -20,7 +21,9 @@ function Posts() {
 
   return (
     <>
-      <h1>Posts</h1>
+      <div className="backgroundPicture">
+      {/* <img src={pictureHome} alt="firstShop" width="600" height="400"/> */}
+      
       <div className="posts-container">
       { loading ? "Loading...." : posts.map((post) => {
         return (
@@ -35,7 +38,7 @@ function Posts() {
           />
         );
       })}
-      </div>
+      </div></div>
       
     </>
   );

@@ -106,16 +106,12 @@ export default function Map() {
     <>
       
       <div className="leaflet-container">
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+        <MapContainer height={100} center={position} zoom={13} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Marker position={position}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
+         
           {/* {allPositions.map(pos => (
             <Marker position={}>
             <Popup>

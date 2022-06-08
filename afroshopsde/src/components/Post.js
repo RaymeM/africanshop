@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 export default function Post({
   name,
   id,
@@ -14,9 +16,9 @@ export default function Post({
         <p className="card-text">{email}</p>
         <p className="card-text">{telephoneNumber}</p>
         <p className="card-text">{owner}</p>
-        <a href={`/posts/${id}`} className="btn btn-primary">
+        <Link to="/map" className="btn btn-primary">
           View
-        </a>
+        </Link>
       </div>
     </div>
   );
